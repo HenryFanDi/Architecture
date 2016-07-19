@@ -8,6 +8,11 @@
 
 import UIKit
 
+struct Person { // Model
+  let firstName: String
+  let lastName: String
+}
+
 class MainViewController: UIViewController {
   
   // MARK: Lifecycle
