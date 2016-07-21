@@ -32,16 +32,29 @@ class GreetingViewModel: GreetingViewModelProtocol {
     self.person = person
   }
   func showGreeting() {
-    self.greeting = "Hello" + " " + self.person.firstName + " " + self.person.lastName
+    self.greeting = "Hello!" + " " + self.person.firstName + " " + self.person.lastName
   }
 }
 
 class MainViewController: UIViewController {
   
+  var viewModel: GreetingViewModelProtocol! {
+    didSet {
+      self.viewModel.greetingDidChange = { viewModel in // Block return from GreetingViewModel
+        print(viewModel.greeting)
+      }
+    }
+  }
+  
   // MARK: Lifecycle
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    let model = Person(firstName: "Henry", lastName: "Fan") // Model
+    let viewModel = GreetingViewModel.init(person: model) // ViewModel
+    self.viewModel = viewModel // View
+    self.viewModel.showGreeting()
   }
   
   override func didReceiveMemoryWarning() {
