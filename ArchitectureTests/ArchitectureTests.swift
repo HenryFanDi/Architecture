@@ -31,6 +31,13 @@ class ArchitectureTests: XCTestCase {
     XCTAssert(person.lastName == "Fan", "Person lastName should be the same")
   }
   
+  func testViewModel() {
+    let model = Person.init(firstName: "Henry", lastName: "Fan")
+    let viewModel = GreetingViewModel.init(person: model)
+    viewModel.showGreeting()
+    XCTAssert(viewModel.greeting == "Hello! \(model.firstName) \(model.lastName)", "viewModel greeting should be the \"Hello! firstName lastName\"")
+  }
+  
   func testPerformanceExample() {
     self.measureBlock {
     }
