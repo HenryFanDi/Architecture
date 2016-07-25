@@ -67,7 +67,7 @@ class MainViewController: UIViewController {
 
   // MARK: Private
   
-  private func setupLabels(model: Person) {
+  func setupLabels(model: Person) {
     firstNameLabel.text = model.firstName
     lastNameLabel.text = model.lastName
   }

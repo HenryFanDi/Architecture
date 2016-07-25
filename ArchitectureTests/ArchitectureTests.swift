@@ -38,6 +38,14 @@ class ArchitectureTests: XCTestCase {
     XCTAssert(viewModel.greeting == "Hello! \(model.firstName) \(model.lastName)", "viewModel greeting should be the \"Hello! firstName lastName\"")
   }
   
+  func testView() {
+    let _ = viewController.view
+    let model = Person.init(firstName: "Henry", lastName: "Fan")
+    viewController.setupLabels(model)
+    XCTAssert(viewController.firstNameLabel.text == model.firstName, "firstNameLabel text should be model's firstName")
+    XCTAssert(viewController.lastNameLabel.text == model.lastName, "lastNameLabel text should be model's lastName")
+  }
+  
   func testPerformanceExample() {
     self.measureBlock {
     }
