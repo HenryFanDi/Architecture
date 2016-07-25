@@ -38,6 +38,9 @@ class GreetingViewModel: GreetingViewModelProtocol {
 
 class MainViewController: UIViewController {
   
+  @IBOutlet weak var firstNameLabel: UILabel!
+  @IBOutlet weak var lastNameLabel: UILabel!
+  
   var viewModel: GreetingViewModelProtocol! {
     didSet {
       self.viewModel.greetingDidChange = { viewModel in // Block return from GreetingViewModel
@@ -55,10 +58,18 @@ class MainViewController: UIViewController {
     let viewModel = GreetingViewModel.init(person: model) // ViewModel
     self.viewModel = viewModel // View
     self.viewModel.showGreeting()
+    setupLabels(model)
   }
   
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
+  }
+
+  // MARK: Private
+  
+  func setupLabels(model: Person) {
+    firstNameLabel.text = model.firstName
+    lastNameLabel.text = model.lastName
   }
   
 }
