@@ -7,6 +7,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="Architecture" customModuleProvider="target">
             <connections>
+                <outlet property="firstNameLabel" destination="p1J-lx-lEV" id="n6c-RT-jEq"/>
+                <outlet property="lastNameLabel" destination="kRu-lg-RYj" id="y84-fj-YtT"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -14,7 +16,63 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" red="1" green="0.43529412150000002" blue="0.81176471709999998" alpha="1" colorSpace="calibratedRGB"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j7q-zS-fKW" userLabel="Title Label">
+                    <rect key="frame" x="20" y="80" width="90" height="20"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" priority="900" constant="90" id="4KC-mj-KiW"/>
+                        <constraint firstAttribute="height" priority="900" constant="20" id="Agd-h1-Kja"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DcN-8M-PzT" userLabel="Sub Title Label">
+                    <rect key="frame" x="20" y="110" width="90" height="20"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" priority="900" constant="20" id="ESQ-0R-hQi"/>
+                        <constraint firstAttribute="width" priority="900" constant="90" id="aEr-Yn-Pvh"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p1J-lx-lEV" userLabel="First Name Label">
+                    <rect key="frame" x="120" y="80" width="180" height="20"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" priority="900" constant="20" id="AD5-F7-z7b"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kRu-lg-RYj" userLabel="Last Name Label">
+                    <rect key="frame" x="120" y="110" width="180" height="20"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" priority="900" constant="20" id="aVN-Yd-rsE"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="DcN-8M-PzT" firstAttribute="top" secondItem="j7q-zS-fKW" secondAttribute="bottom" constant="10" id="CN8-42-8nX"/>
+                <constraint firstAttribute="trailing" secondItem="p1J-lx-lEV" secondAttribute="trailing" constant="20" id="H3l-df-dNN"/>
+                <constraint firstItem="DcN-8M-PzT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="cBR-id-UST"/>
+                <constraint firstItem="p1J-lx-lEV" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="cb2-cT-Hvs"/>
+                <constraint firstItem="j7q-zS-fKW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="eDH-eC-A0k"/>
+                <constraint firstAttribute="trailing" secondItem="kRu-lg-RYj" secondAttribute="trailing" constant="20" id="gho-xq-zMC"/>
+                <constraint firstItem="j7q-zS-fKW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="n7y-uY-YDC"/>
+                <constraint firstItem="kRu-lg-RYj" firstAttribute="leading" secondItem="DcN-8M-PzT" secondAttribute="trailing" constant="10" id="nk0-Cu-jrF"/>
+                <constraint firstItem="kRu-lg-RYj" firstAttribute="top" secondItem="p1J-lx-lEV" secondAttribute="bottom" constant="10" id="xw8-oN-zQY"/>
+                <constraint firstItem="p1J-lx-lEV" firstAttribute="leading" secondItem="j7q-zS-fKW" secondAttribute="trailing" constant="10" id="zbH-U1-6dt"/>
+            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
