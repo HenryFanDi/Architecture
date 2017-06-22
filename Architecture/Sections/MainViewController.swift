@@ -44,7 +44,6 @@ class MainViewController: UIViewController {
   var viewModel: GreetingViewModelProtocol! {
     didSet {
       self.viewModel.greetingDidChange = { viewModel in // Block return from GreetingViewModel
-        print(viewModel.greeting)
       }
     }
   }
@@ -67,7 +66,7 @@ class MainViewController: UIViewController {
 
   // MARK: Private
   
-  func setupLabels(model: Person) {
+  func setupLabels(_ model: Person) {
     firstNameLabel.text = model.firstName
     lastNameLabel.text = model.lastName
   }
